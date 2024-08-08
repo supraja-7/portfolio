@@ -1,0 +1,347 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equvi="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Portfolio</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins',sans-serif;
+                text-decoration: none;
+                list-style: none;
+            }
+            .header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 25px 12%;
+                background: rgba(0,0,0,0.8);
+                backdrop-filter: blur(10px);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100%;
+            }
+            .logo{
+                font-size: 25px;
+                color: #fff;
+                font-weight: 600;
+                transition: 0.3s ease;
+            }
+            .logo:hover{
+                color: orangered;
+                text-shadow: 0 0 25px orangered,
+                             0 0 50px orangered;
+                             transform: scale(1.1);
+            }
+            span{
+                color: orangered;
+            }
+            .navbar a{
+                   display: inline-block;
+                   font-size: 18px;
+                   margin: 0 20px;
+                   border-bottom: 3px solid transparent;
+                   color: #fff;
+                   text-decoration: none;
+                   font-weight: 500;
+                   transition: .3s;
+            }
+            .navbar a:hover,
+            .navbar a.active{
+                border-bottom: 3px solid orangered;
+                color: #0ef;
+            }
+            .home{
+                width: 100%;
+                min-height: 100vh;
+                background: rgb(241, 241, 241);
+                display: flex;
+                align-items: center;
+                gap: 7rem;
+                padding: 30px 12% 0;
+            }
+            .home-content{
+                max-width: 800px;
+            }
+            .home-content h3{
+                font-size: 42px;
+            }
+            .home-content h1{
+                font-size: 62px;
+                line-height: 1.2;
+            }
+            .home-content p{
+                font-size: 18px;
+                margin: 25px 0 30px;
+            }
+            
+            .img-box img{
+                border-radius: 50%;
+                width: 450px;
+            }
+            ::-webkit-scrollbar{
+                width: 15px;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: orangered;
+            }
+            ::-webkit-scrollbar-track{
+                background-color: rgba(0,0,0,0.6);
+                width: 50px;
+            }
+            .about-content h2{
+                text-align: left;
+                color: black;
+                font-size: 27px;
+                text-align: center;
+
+            }
+            .about-content h3{
+                font-size: 32px;
+                color: black;
+                text-align: center;
+            }
+            .about-content p{
+                color: black;
+                font-size: 20px;
+                margin: 2rem 0 3rem;
+                text-align: center;
+            }
+            .Education{
+                text-align: center;
+                font-weight: 600;
+                padding: 50px;
+            }
+            .Education-content h1{
+                text-align: center;
+                font-weight: 600;
+                font-size: 25px;
+                color: orangered;
+            }
+            .Education-content h2{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .Education-content h3{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .Education-content h4{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .experience-content h1{
+                text-align: center;
+                font-weight: 600;
+                font-size: 25px;
+                color: orangered;
+            }
+            .experience-content h3{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .experience-content h4{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .Skills{
+                text-align: center;
+                font-weight: 600;
+            }
+            .Skills-content h1{
+                text-align: center;
+                font-weight: 600;
+                color: orangered;
+                font-size: 25px;
+            }
+            .Skills-content  ul li{
+                text-align: center;
+                font-weight: 600;
+                color: black;
+                font-size: 20px;
+
+            }
+            .Projects-content h1{
+                text-align: center;
+                font-weight: 600;
+                color: orangered;
+            }
+            .Projects-content h2{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .Projects-content h4{
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .Projects-content a{
+                text-align: center;
+                font-weight: 500;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+             .Projects-content  a{
+                text-align: center;
+             }
+             .Projects .Projects-content a{
+                text-align: center;
+             }
+             .Resume h1{
+                text-align: center;
+                font-weight: 600;
+                color: orangered;
+             }
+             .Resume-content a{
+                text-align: center;
+                font-weight: 500;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+            .contact h2{
+                text-align: center;
+                font-size: 25px;
+                color: orangered;
+            }
+            .Contact-content a{
+                text-decoration: underline;
+            }
+           .footer{
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 40px 0;
+
+           }
+           footer {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: auto;
+        }
+        footer a {
+            position: center;
+            color:#fff;
+            font-size: 50px;
+        }
+        
+        footer a:not(:last-child){
+            margin-right: 50px;
+        }
+        footer a:hover {
+            transform: scale(1.5);
+        }
+        footer{
+            background-color: #1226a6;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+       </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo"><span>port</span>folio</a>
+            <nav class="navbar">
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Education">Education</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Projects">projects</a>
+                <a href="#Resume">Resume</a>
+                </nav>
+                <a href="#Contact" class="contact">Contact Me</a>    
+        </header>
+         
+        <section class="home" id="Home">
+            <div class="home-content">
+                <h3>Hello</h3>
+
+                <h1>I'm <span>Supraja<br></span>a Frontend Developer</h1>
+            </div>
+            <div class="img-box">
+                <img src="subbu passphoto.jpeg">
+            </div>
+        </section><br>
+        <section class="about" id="About" >
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Frontend <span>Developer</span></h3>
+                <p>I am computer science student currently pursuing Btech third year in the stream of computer science and engineering with<br> artificial intelligence and machine learning as my specialization at Rise Krishna Sai Praksam Group Of Institutions.<br>I am passionate to get employed in the field of web development.,<br></p>
+            </div>
+        </section><br><br>
+        <section class="Education" id="Education">
+            <div class="Education-content">
+            <h1>Education</h1><br>
+            <h2>Rise Krishna Sai Prakasam Group Of Institutions</h2>
+            <h3>Bachelor of Technology (B.Tech.) in Computer Science Engineering with AI&ML specialization</h3>
+            <h4>Year: 2021 - 2025</h4>
+            </div>
+        </section><br><br><br>
+        <section class="experience" id="Experience">
+            <div class="experience-content">
+            <h1>Work Experience</h1><br>
+            <h3>CodSoft</h3>
+            <h4>Wed-Development Intern</h4>
+            <h4>April-2024 to May-2024</h4>
+            </div>
+        </section><br><br><br>
+        <section class="skills" id="Skills">
+            <div class="Skills-content">
+            <h1>Skills</h1><br>
+            <ul>
+                <li>C</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            </div>
+        </section><br><br><br>
+        <section class="Projects" id="Projects">
+            <div class="Projects-content">
+            <h1>Personal Projects</h1><br>
+            <h2>Courses Website</h2>
+            <h4>Used web technologies for building this website.</h4>
+            <center><a href="https://supraja-7.github.io/project4/">View Project</a></center><br>
+            <h2>Events Website</h2>
+            <h4>Used web technologies for building this website.</h4>
+            <center><a href=" https://supraja-7.github.io/project-5/">View Project</a></center>
+            </div>
+        </section><br><br>
+        <section class="Resume" id="Resume">
+            <div class="Resume-content">
+                <h1>Resume Download</h1>
+            <center><a href="supppu resume.docx">Click  here</a></center>
+            </div>
+        </section><br><br>
+        <section class="contact" id="Contact">
+            <div class="Contact-content">
+            <h2 class="contact-me">Contact Me</h2>
+            <center>
+              <p>Email:Suprajavemula07@gmail.com</p>
+              <a href="https://www.linkedin.com/in/supraja-vemula-709757267" target="_blank">LinkedIn</a><br>
+              <a href="https://github.com/supraja-7" target="_blank">GitHub</a>
+              </center>
+              </div>
+        </section><br><br>
+            <footer>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+                </footer>
+                <footer>
+                    <p>&copy;2024 Supraja. All rights reserved.</p>
+                </footer>
+    </body>
+</html>
